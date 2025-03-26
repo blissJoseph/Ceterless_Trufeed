@@ -1765,13 +1765,44 @@
         </menu>
         <form name="Maintenance" color="#DCE6F1">
             <init>
+                <control name="Z-Axis_Ref_Po" xpos="350" ypos="30" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12"  />
+                <control name="U1-Axis_Ref_Po" xpos="350" ypos="60" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12"  />
+                <control name="W1-Axis_Ref_Po" xpos="350" ypos="90" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12"  />
+                <control name="U2-Axis_Ref_Po" xpos="350" ypos="120" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12"  />
+                <control name="W2-Axis_Ref_Po" xpos="350" ypos="150" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12"  />
+
+                <control name="Z-Axis_Ref_Po_Button" xpos="420" ypos="30" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> 2 </caption>
+                </control>
+                <control name="U1-Axis_Ref_Po_Button" xpos="420" ypos="60" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> 2 </caption>
+                </control>
+                <control name="W1-Axis_Ref_Po_Button" xpos="420" ypos="90" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> 2 </caption>
+                </control>
+                <control name="U2-Axis_Ref_Po_Button" xpos="420" ypos="120" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> 2 </caption>
+                </control>
+                <control name="W2-Axis_Ref_Po_Button" xpos="420" ypos="150" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> 2 </caption>
+                </control>
+
+                <control name="CHANGE" xpos="350" ypos="180" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
+                    <caption> CHANGE</caption>
+                </control>
+
 
 
             </init>
 
             <paint>
                 <BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />    
-
+                
+                <text xpos = "120" ypos = "30" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Z-Axis Refrance postion </text>
+                <text xpos = "120" ypos = "60" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> U1-Axis Refrance postion </text>
+                <text xpos = "120" ypos = "90" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> W1-Axis Refrance postion </text>
+                <text xpos = "120" ypos = "120" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> U2-Axis Refrance postion </text>
+                <text xpos = "120" ypos = "150" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> W2-Axis Refrance postion </text>
 
 
             </paint>
@@ -1820,6 +1851,55 @@
         </menu>
         <form name="CycleOperationParameter" color="#DCE6F1">
             <init>
+                <CONTROL name = "Main_Checkbox1" xpos = "150" ypos = "30" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Single block applied </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox2" xpos = "150" ypos = "55" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Enable Auto cycle without work-piece </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox3" xpos = "150" ypos = "80" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Ignore Coolant action detection </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox4" xpos = "150" ypos = "105" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox5" xpos = "150" ypos = "130" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox6" xpos = "150" ypos = "155" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox7" xpos = "150" ypos = "180" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox8" xpos = "150" ypos = "205" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+
+                <CONTROL name = "Main_Checkbox9" xpos = "400" ypos = "30" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox10" xpos = "400" ypos = "55" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox11" xpos = "400" ypos = "80" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox12" xpos = "400" ypos = "105" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox13" xpos = "400" ypos = "130" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox14" xpos = "400" ypos = "155" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox15" xpos = "400" ypos = "180" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
+                <CONTROL name = "Main_Checkbox16" xpos = "400" ypos = "205" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>Reserved </caption>
+                </control>
 
 
             </init>
@@ -1833,7 +1913,7 @@
         </form>
     <!--Spindle Parameter Menu-->
         <menu name="SpindleParameter">
-            <OPEN_FORM name="Maintenance"/>
+            <OPEN_FORM name="SpindleParameter"/>
 
             <softkey POSITION="1" picture="HomeON.png"aligment="left" TextAlignedToPicture="true">
                 <caption>HOME</caption>
@@ -1875,12 +1955,38 @@
         <form name="SpindleParameter" color="#DCE6F1">
             <init>
 
+                <control name="GW_Spindle" xpos="250" ypos="50" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12"  />
+                <control name="RW_Spindle" xpos="250" ypos="80" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12"  />
+                <control name="RingFeed_" xpos="250" ypos="110" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.3f" fontpixelsize = "12"  />
+
+
+                <CONTROL name = "GW_Spindle_CW" xpos = "350" ypos = "50" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>C.W</caption>
+                </control>
+                <CONTROL name = "GW_Spindle_CCW" xpos = "400" ypos = "50" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>C.C.W</caption>
+                </control>
+                <CONTROL name = "RW_Spindle_CW" xpos = "350" ypos = "80" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>C.W</caption>
+                </control>
+                <CONTROL name = "RW_Spindle_CCW" xpos = "400" ypos = "80" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>C.C.W</caption>
+                </control>
+                <CONTROL name = "RingFeed_CW" xpos = "350" ypos = "110" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>C.W</caption>
+                </control>
+                <CONTROL name = "RingFeed_CCW" xpos = "400" ypos = "110" width = "150" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+                    <caption>C.C.W</caption>
+                </control>
 
             </init>
 
             <paint>
                 <BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />    
 
+                <text xpos = "160" ypos = "50" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> G/W Spindle </text>
+                <text xpos = "160" ypos = "80" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> R/W Spindle </text>
+                <text xpos = "160" ypos = "110" width="70" height="20" fontpixelsize = "10" color_bk = "#FFFFFF"> Ring Feeder </text>
 
 
             </paint>
