@@ -1,46 +1,44 @@
-<!--Manual Menu-->
-<menu name="menu_Manual">
-	<OPEN_FORM name="Manual"/>
+<!--Menu-->
+    <menu name="menu_Manual">
+        <OPEN_FORM name="Manual"/>
 
-	<softkey POSITION="1" >
-		<caption>Home</caption>
-		<navigation>menu_home</navigation>
-	</softkey>
+        <softkey POSITION="1" >
+            <caption>Home</caption>
+            <navigation>menu_home</navigation>
+        </softkey>
 
-	<softkey POSITION="2" >
-		<caption>Auto</caption>
-		<navigation>menu_Auto</navigation>
-	</softkey>
+        <softkey POSITION="2" >
+            <caption>Auto</caption>
+            <navigation>menu_Auto</navigation>
+        </softkey>
 
-	<softkey POSITION="3" >
-		<caption>SemiAuto</caption>
-		<navigation>menu_SemiAuto</navigation>
-	</softkey>
+        <softkey POSITION="3" >
+            <caption>SemiAuto</caption>
+            <navigation>menu_SemiAuto</navigation>
+        </softkey>
 
-	<softkey POSITION="4" >
-		<caption>Manual</caption>
-		<navigation>menu_Manual</navigation>
-	</softkey>
+        <softkey POSITION="4" >
+            <caption>Manual</caption>
+            <navigation>menu_Manual</navigation>
+        </softkey>
 
-	<softkey POSITION="5" >
-		<caption>Setting</caption>
-		<navigation>menu_Setting</navigation>
-	</softkey>
+        <softkey POSITION="5" >
+            <caption>Setting</caption>
+            <navigation>menu_Setting</navigation>
+        </softkey>
 
-	<softkey POSITION="6" >
-		<caption>Maintenance</caption>
-		<navigation>menu_Maintenance</navigation>
-	</softkey>
+        <softkey POSITION="6" >
+            <caption>Maintenance</caption>
+            <navigation>menu_Maintenance</navigation>
+        </softkey>
 
-	<softkey_back>
-		<navigation>Main</navigation>
-	</softkey_back>
+        <softkey_back>
+            <navigation>Main</navigation>
+        </softkey_back>
 
-</menu>
-
-
-
-<form name="Manual" color="#DCE6F1">
+    </menu>
+<!--Form-->
+    <form name="Manual" color="#DCE6F1">
         <init>
             <!-- Title Box-->
                 <control name="Title_Remaining_Distance" xpos="310" ypos="10" width="100" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
@@ -252,3 +250,6 @@
 
         </paint>
     </form>
+<!--Variables-->
+
+<!--Functions-->

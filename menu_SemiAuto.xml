@@ -1,44 +1,44 @@
-<!--Semi Auto  Menu-->
-<menu name="menu_SemiAuto">
-	<OPEN_FORM name="SemiAuto"/>
+<!--Menu-->
+    <menu name="menu_SemiAuto">
+        <OPEN_FORM name="SemiAuto"/>
 
-	<softkey POSITION="1" >
-		<caption>Home</caption>
-		<navigation>menu_home</navigation>
-	</softkey>
+        <softkey POSITION="1" >
+            <caption>Home</caption>
+            <navigation>menu_home</navigation>
+        </softkey>
 
-	<softkey POSITION="2" >
-		<caption>Auto</caption>
-		<navigation>menu_Auto</navigation>
-	</softkey>
+        <softkey POSITION="2" >
+            <caption>Auto</caption>
+            <navigation>menu_Auto</navigation>
+        </softkey>
 
-	<softkey POSITION="3" >
-		<caption>SemiAuto</caption>
-		<navigation>menu_SemiAuto</navigation>
-	</softkey>
+        <softkey POSITION="3" >
+            <caption>SemiAuto</caption>
+            <navigation>menu_SemiAuto</navigation>
+        </softkey>
 
-	<softkey POSITION="4" >
-		<caption>Manual</caption>
-		<navigation>menu_Manual</navigation>
-	</softkey>
+        <softkey POSITION="4" >
+            <caption>Manual</caption>
+            <navigation>menu_Manual</navigation>
+        </softkey>
 
-	<softkey POSITION="5" >
-		<caption>Setting</caption>
-		<navigation>menu_Setting</navigation>
-	</softkey>
+        <softkey POSITION="5" >
+            <caption>Setting</caption>
+            <navigation>menu_Setting</navigation>
+        </softkey>
 
-	<softkey POSITION="6" >
-		<caption>Maintenance</caption>
-		<navigation>menu_Maintenance</navigation>
-	</softkey>
+        <softkey POSITION="6" >
+            <caption>Maintenance</caption>
+            <navigation>menu_Maintenance</navigation>
+        </softkey>
 
-	<softkey_back>
-		<navigation>Main</navigation>
-	</softkey_back>
+        <softkey_back>
+            <navigation>Main</navigation>
+        </softkey_back>
 
-</menu>
-	
-
+    </menu>
+        
+<!--Form-->
     <form name="SemiAuto" color="#DCE6F1">
         <init>
             <!-- Title Box-->
@@ -124,9 +124,6 @@
                 <control name="10_Right" xpos="170" ypos="290" width="50" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "10" fieldtype="pushbutton" >
                     <caption> - </caption>
                 </control>
-
-
-
 
             <!--Center-->
 
@@ -229,3 +226,5 @@
 
         </paint>
     </form>
+<!--Variables-->
+<!--Functions-->
