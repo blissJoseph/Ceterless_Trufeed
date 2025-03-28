@@ -1,0 +1,208 @@
+<!--Cycle Data menu-->
+<menu name="menu_Setting">
+	<OPEN_FORM name="Setting"/>
+
+	<softkey POSITION="1" >
+		<caption>Home</caption>
+		<navigation>menu_home</navigation>
+	</softkey>
+
+	<softkey POSITION="2" >
+		<caption>Auto</caption>
+		<navigation>menu_Auto</navigation>
+	</softkey>
+
+	<softkey POSITION="3" >
+		<caption>SemiAuto</caption>
+		<navigation>menu_SemiAuto</navigation>
+	</softkey>
+
+	<softkey POSITION="4" >
+		<caption>Manual</caption>
+		<navigation>menu_Manual</navigation>
+	</softkey>
+
+	<softkey POSITION="5" >
+		<caption>Setting</caption>
+		<navigation>menu_Setting</navigation>
+	</softkey>
+
+	<softkey POSITION="6" >
+		<caption>Maintenance</caption>
+		<navigation>menu_Maintenance</navigation>
+	</softkey>
+
+	<softkey_back>
+		<navigation>Main</navigation>
+	</softkey_back>
+
+	<softkey POSITION="9" >
+		<caption>CYCLE DATA</caption>
+		<navigation>menu_Setting</navigation>
+	</softkey>
+
+	<softkey POSITION="10" >
+		<caption>DRESSING DATA </caption>
+		<navigation>menu_DressingData</navigation>
+	</softkey>
+
+	<softkey POSITION="11" >
+		<caption>UTILITY DATA </caption>
+		<navigation>menu_UtilityData</navigation>
+	</softkey>
+
+	<softkey POSITION="12" >
+		<caption>TEACHING DATA </caption>
+		<navigation>menu_TeachingData</navigation>
+	</softkey>
+
+</menu>
+
+
+
+<form name="Setting" color="#DCE6F1">
+	<init>
+
+		<!--No Work Interval -->
+			<control name="Set_no_work_interval" xpos="20" ypos="10" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+				<caption alignment= "left">No Work Interval</caption>
+			</control>
+
+			<control name="Interval_Value" xpos="150" ypos="10" width="50" height="20" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
+
+		<!--Restart Mode Selection -->
+			<control name="Set_restart_mode_selection" xpos="20" ypos="50" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+				<caption alignment= "left">Restart Mode Selection</caption>
+			</control>
+
+			<CONTROL name = "Set_restart_mode_selection_Checkbox1" xpos = "150" ypos = "50" width = "80" fieldtype = "checkbox"  fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+				<caption>Auto Restart</caption>
+			</control>
+			<CONTROL name = "Set_restart_mode_selection_Checkbox2" xpos = "150" ypos = "75" width = "80" fieldtype = "checkbox" fontpixelsize = "10" refvar = "nck/Channel/GeometricAxis/actProgPos[1]">
+				<caption >Maual Restart</caption>
+			</control>
+
+		<!--Auto Mode Timing -->
+			<control name="Set_auto_mode_timing" xpos="20" ypos="120" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+				<caption alignment= "left">Auto Mode Timing</caption>
+			</control>
+
+			<control name="Set_auto_mode_timing_table11" xpos="81" ypos="181" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Set_auto_mode_timing_table12" xpos="141" ypos="181" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Set_auto_mode_timing_table13" xpos="201" ypos="181" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Set_auto_mode_timing_table21" xpos="81" ypos="201" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Set_auto_mode_timing_table22" xpos="141" ypos="201" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Set_auto_mode_timing_table23" xpos="201" ypos="201" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+
+
+		<!--Forced Compensation -->
+			<control name="Set_forced_compensation" xpos="280" ypos="10" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+				<caption alignment= "left">Forced Compensation</caption>
+			</control>
+
+			<control name="Force_Value1" xpos="410" ypos="10" width="35" height="20" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
+			<control name="Force_Value2" xpos="460" ypos="10" width="35" height="20" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
+
+		<!--Auto Compensation -->
+			<control name="Set_auto_compensation" xpos="280" ypos="50" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+				<caption alignment= "left">Auto Compensation</caption>
+			</control>
+			<control name="Auto_target_count" xpos="410" ypos="70" width="35" height="20" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
+
+			<control name="Auto_compensation_amount1" xpos="410" ypos="95" width="35" height="20" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
+			<control name="Auto_compensation_amount2" xpos="460" ypos="95" width="35" height="20" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly"  format="%9.2f" fontpixelsize = "12" color_bk = "#FFFFFF"/>
+
+		<!--Reprocessing Feeder -->
+			<control name="Set_reprocessing_feeder" xpos="280" ypos="120" width="120" height="20" color_bk="#757575" color_fg = "#FFFFFF" fontpixelsize = "12" fieldtype="pushbutton" >
+				<caption alignment= "left">Reprocessing Feeder</caption>
+			</control>
+
+			<control name="Repro_Return_Target_Po" xpos="351" ypos="181" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Repro_Return_Speed_Val" xpos="431" ypos="181" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Repro_1st_Target_Po" xpos="351" ypos="201" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Repro_1st_Speed_Val" xpos="431" ypos="201" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Repro_2st_Target_Po" xpos="351" ypos="221" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Repro_2st_Speed_Val" xpos="431" ypos="221" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Repro_Final_Target_Po" xpos="351" ypos="241" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+			<control name="Repro_Final_Speed_Val" xpos="431" ypos="241" width="59" height="19" refvar="nck/Channel/GeometricAxis/progDistToGo[2]" fieldtype="readonly" format="%9.2f" fontpixelsize = "12"  />
+
+
+	</init>
+
+	<paint>
+		<BOX xpos = "0" ypos = "0" width = "590" height = "410" color = "#DCE6F1" />
+		<!--No Work Interval -->
+		<!--Restart Mode Selection -->
+		<!--Auto Mode Timing -->
+			<!--Table Box-->
+
+				<BOX xpos = "20" ypos = "160" width = "242" height = "62" color = "#000000" />
+
+				<box xpos = "21" ypos = "161" width = "59" height = "19" color = "#FFFFFF" />
+				<box xpos = "81" ypos = "161" width = "59" height = "19" color = "#FFFFFF" />
+				<box xpos = "141" ypos = "161" width = "59" height = "19" color = "#FFFFFF" />
+				<box xpos = "201" ypos = "161" width = "59" height = "19" color = "#FFFFFF" />
+
+				<box xpos = "21" ypos = "181" width = "59" height = "19" color = "#FFFFFF" />
+				<box xpos = "81" ypos = "181" width = "59" height = "19" color = "#FFFFFF" />
+				<box xpos = "141" ypos = "181" width = "59" height = "19" color = "#FFFFFF" />
+				<box xpos = "201" ypos = "181" width = "59" height = "19" color = "#FFFFFF" />
+
+				<box xpos = "21" ypos = "201" width = "59" height = "19" color = "#FFFFFF" />
+				<box xpos = "81" ypos = "201" width = "59" height = "19" color = "#FFFFFF" />
+				<box xpos = "141" ypos = "201" width = "59" height = "19" color = "#FFFFFF" />
+				<box xpos = "201" ypos = "201" width = "59" height = "19" color = "#FFFFFF" />
+
+			<!-- Text -->
+				<text xpos = "21" ypos = "181" width="16" height="32" fontpixelsize = "10" > Strat timing </text>
+				<text xpos = "21" ypos = "201" width="16" height="32" fontpixelsize = "10" > Stop timing </text>
+
+				<text xpos = "81" ypos = "161" width="16" height="32" fontpixelsize = "10" > Processing Feeder </text>
+				<text xpos = "141" ypos = "161" width="16" height="32" fontpixelsize = "10" > Regulating Wheel </text>
+				<text xpos = "201" ypos = "161" width="16" height="32" fontpixelsize = "10" > Ring Feeder </text>
+
+
+		<!--Forced Compensation -->
+		<!--Auto compensation -->
+			<text xpos = "290" ypos = "75" width="10" height="32" fontpixelsize = "10">Target Count </text>
+			<text xpos = "290" ypos = "100" width="10" height="32" fontpixelsize = "10">Auto compensation amount </text>
+
+
+
+		<!--Reprocessing Feeder -->
+			<!-- Table Box-->
+				<BOX xpos = "280" ypos = "160" width = "262" height = "102" color = "#000000" />
+
+				<box xpos = "281" ypos = "161" width = "69" height = "19" color = "#FFFFFF" />
+				<box xpos = "351" ypos = "161" width = "79" height = "19" color = "#FFFFFF" />
+				<box xpos = "431" ypos = "161" width = "109" height = "19" color = "#FFFFFF" />
+
+				<box xpos = "281" ypos = "181" width = "69" height = "19" color = "#FFFFFF" />
+				<box xpos = "351" ypos = "181" width = "79" height = "19" color = "#FFFFFF" />
+				<box xpos = "431" ypos = "181" width = "109" height = "19" color = "#FFFFFF" />
+
+				<box xpos = "281" ypos = "201" width = "69" height = "19" color = "#FFFFFF" />
+				<box xpos = "351" ypos = "201" width = "79" height = "19" color = "#FFFFFF" />
+				<box xpos = "431" ypos = "201" width = "109" height = "19" color = "#FFFFFF" />
+
+				<box xpos = "281" ypos = "221" width = "69" height = "19" color = "#FFFFFF" />
+				<box xpos = "351" ypos = "221" width = "79" height = "19" color = "#FFFFFF" />
+				<box xpos = "431" ypos = "221" width = "109" height = "19" color = "#FFFFFF" />
+
+				<box xpos = "281" ypos = "241" width = "69" height = "19" color = "#FFFFFF" />
+				<box xpos = "351" ypos = "241" width = "79" height = "19" color = "#FFFFFF" />
+				<box xpos = "431" ypos = "241" width = "109" height = "19" color = "#FFFFFF" />
+
+
+			<!-- Text -->
+				<text xpos = "281" ypos = "181" width="16" height="32" fontpixelsize = "10" > Return </text>
+				<text xpos = "281" ypos = "201" width="16" height="32" fontpixelsize = "10" > 1st Feeder Step </text>
+				<text xpos = "281" ypos = "221" width="16" height="32" fontpixelsize = "10" > 2st Feeder Step </text>
+				<text xpos = "281" ypos = "241" width="16" height="32" fontpixelsize = "10" > Final Feeder Step </text>
+
+				<text xpos = "351" ypos = "161" width="16" height="32" fontpixelsize = "10" > Target Position </text>
+				<text xpos = "431" ypos = "161" width="16" height="32" fontpixelsize = "10" > Speed Value </text>
+
+
+	</paint>
+</form>
